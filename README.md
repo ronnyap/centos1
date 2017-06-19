@@ -10,6 +10,6 @@
 yum update -y
 yum install python -y
 yum install git -y
-git clone https://github.com/syahz86/menu.git
+wget https://raw.githubusercontent.com/syahz86/menu/master/menu.py
 cp menu/menu.py /usr/bin/menu
 chmod +x /usr/bin/menu
