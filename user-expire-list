@@ -1,0 +1,25 @@
+#!/bin/bash
+
+MYIP=$(wget -qO- ipv4.icanhazip.com)
+
+disable-user-expire
+clear
+
+echo "---------------------------- DAFTAR AKAUN SSH EXPIRE ----------------------------"
+
+if [[ $vps = "soned" ]]; then
+	echo "                     ALL SUPPORTED BY GollumVPN                            "
+	echo "             Script by SYAHZ86   "
+else
+	echo "                     ALL SUPPORTED BY GollumVPN                            "
+	echo "             Script by SYAHZ86   "
+fi
+
+	echo "            DEVELOPED BY SYAHZ86     "
+echo ""
+
+cat /root/expireduser.txt
+echo ""
+
+cd ~/
+rm -f /root/IP
