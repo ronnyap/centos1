@@ -24,85 +24,29 @@ _(())\_)()((_) (_))  )\___  ((_) (_()((_)((_)  (_(_())   ((_)  (_()((_)((_)  _((
 1) User Login Dropbear 
 2) Add User
 3) Expired User List
-4)Delete Expired User
-
+4) Delete Expired User
+5) Exit
 			''')
 
-				opcion0 = raw_input("\033[1;36mkat > \033[1;m")
-			
-				while opcion0 == "1":
+				opcion0 = raw_input("\033[1;36mchoose > \033[1;m")
 					print ('''
-1) User Login Dropbear 
-2) Add User
-3) Expired User List
-4)Delete Expired User
-
 
                                         ''')
 				        repo = raw_input("\033[1;32mWhat do you want to do ?> \033[1;m")
 					if repo == "1":
-						cmd1 = os.system("apt-key adv --keyserver pgp.mit.edu --recv-keys ED444FF07D8D0BF6")
-						cmd2 = os.system("echo '# Kali linux repositories | Added by Katoolin\ndeb http://http.kali.org/kali kali-rolling main contrib non-free' >> /etc/apt/sources.list")
+						cmd1 = os.system("sudo sh userlogin.sh 443")
 					elif repo == "2":
-						cmd3 = os.system("apt-get update -m")
+						cmd1 = os.system("sudo usernew")
 					elif repo == "3":
-						infile = "/etc/apt/sources.list"
-						outfile = "/etc/apt/sources.list"
-
-						delete_list = ["# Kali linux repositories | Added by Katoolin\n", "deb http://http.kali.org/kali kali-rolling main contrib non-free\n"]
-						fin = open(infile)
-						os.remove("/etc/apt/sources.list")
-						fout = open(outfile, "w+")
-						for line in fin:
-						    for word in delete_list:
-						        line = line.replace(word, "")
-						    fout.write(line)
-						fin.close()
-						fout.close()
-						print ("\033[1;31m\nAll kali linux repositories have been deleted !\n\033[1;m")
-					elif repo == "back":
-						inicio1()
-					elif repo == "gohome":
-						inicio1()
+						cmd1 = os.system("cat expireduser.txt")
 					elif repo == "4":
-						file = open('/etc/apt/sources.list', 'r')
+						cmd1 = os.system("sh autoexpire.sh")
+					elif repo == "5":
+						inicio1()
 
-						print (file.read())
-
-					else:
-						print ("\033[1;31mSorry, that was an invalid command!\033[1;m"
-							
-
-			''')
-
-				opcion0 = raw_input("\033[1;36mchoose > \033[1;m")
-			
-				while opcion
-							if opcion2 == "1":
-								cmd = os.system("sudo sh userlogin.sh 443")
-								print (" ")
-							elif opcion2 == "2":
-								cmd = os.system("sudo usernew")
-								print (" ")
-                elif opcion2 == "3":
-								cmd = os.system("sudo cat expireduser.txt")
-                print (" ")
-							elif opcion2 == "4":
-								cmd = os.system("sudo sh autoexpire.sh")
-                else:
-								print ("\033[1;31mSorry, that was an invalid command!\033[1;m")
-                while opcion1 == "5" :
-							print ('''
-								inicio1()
-	elif opcion2 == "back":
-								inicio()
-							elif opcion2 == "gohome":
-								inicio1()
-
-				inicio()
-		inicio1()
+	inicio1()
 	except KeyboardInterrupt:
-		print ("Thank You")
+		print ("Goodbye...")
 	except Exception:
 		traceback.print_exc(file=sys.stdout)
 	sys.exit(0)
