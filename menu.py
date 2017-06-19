@@ -26,11 +26,9 @@ _(())\_)()((_) (_))  )\___  ((_) (_()((_)((_)  (_(_())   ((_)  (_()((_)((_)  _((
 3) Expired User List
 4) Delete Expired User
 5) Exit
-			''')
 
 				opcion0 = raw_input("\033[1;36mchoose > \033[1;m")
 
-                                        ''')
 				        repo = raw_input("\033[1;32mWhat do you want to do ?> \033[1;m")
 					if repo == "1":
 						cmd1 = os.system("sudo sh userlogin.sh 443")
@@ -49,6 +47,3 @@ _(())\_)()((_) (_))  )\___  ((_) (_()((_)((_)  (_(_())   ((_)  (_()((_)((_)  _((
 	except Exception:
 		traceback.print_exc(file=sys.stdout)
 	sys.exit(0)
-
-if __name__ == "__main__":
-    main()
