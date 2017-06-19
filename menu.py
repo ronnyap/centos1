@@ -41,9 +41,13 @@ _(())\_)()((_) (_))  )\___  ((_) (_()((_)((_)  (_(_())   ((_)  (_()((_)((_)  _((
 					elif repo == "5":
 						inicio1()
 
-	inicio1()
+					inicio()
+		inicio1()
 	except KeyboardInterrupt:
-		print ("Goodbye...")
+		print ("Shutdown requested...Goodbye...")
 	except Exception:
 		traceback.print_exc(file=sys.stdout)
 	sys.exit(0)
+
+if __name__ == "__main__":
+    main(
