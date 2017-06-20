@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python test.py --share
+speedtest-cli --share
 echo "--------------------------" 
 echo -e "Script by \e[1;33;44mGollumVPN|SYAHZ86\e[0m"
 echo "--------------------------"
