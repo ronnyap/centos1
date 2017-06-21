@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "---------------"
-echo "BIL  USERNAME  "
+echo "   USERNAME    "
 echo "---------------"
 echo "" > /root/infouser.txt
 echo "" > /root/expireduser.txt
