@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "---------------"
-echo "BIL  USERNAME  "
+echo "   USERNAME    "
 echo "---------------"
 cat /etc/shadow | cut -d: -f1,8 | sed /:$/d > /tmp/expirelist.txt
     totalaccounts=`cat /tmp/expirelist.txt | wc -l`
