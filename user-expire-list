@@ -1,4 +1,7 @@
 #!/bin/bash
+echo "---------------------------------------------"
+echo "BIL  USERNAME        STATUS       EXP DATE   "
+echo "---------------------------------------------"
 echo "" > /root/infouser.txt
 echo "" > /root/expireduser.txt
 echo "" > /root/alluser.txt
