@@ -41,7 +41,7 @@ else
 	#echo "OpenVPN Config: http://$MYIP:81/client.ovpn"
 	echo "Username: $username"
 	echo "Password: $password"
-	echo "Valid s/d: $(date -d "$AKTIF days" +"%d-%m-%Y")"
+	echo "Expired : $(date -d "$AKTIF days" +"%d-%m-%Y")"
 	echo "-----------------------------------"
 fi
 
