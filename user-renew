@@ -10,10 +10,10 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 echo "---------------------------- TAMBAH MASA AKTIF AKAUN SSH ----------------------------"
 
 if [[ $vps = "soned" ]]; then
-	echo "            Support Us at GollumVPN             "
+	echo "            Support Us at GollumVPN    "
 	
 else
-	echo "            VPS & SSH MURAH             "
+	echo "            SCRIPT BY SYAHZ86          "
 fi
 
 	echo "            DEVELOPED BY SYAHZ86       "
@@ -41,15 +41,15 @@ read -p "Isikan username: " username
 
 egrep "^$username" /etc/passwd >/dev/null
 if [ $? -eq 0 ]; then
-	#read -p "Isikan password akun [$username]: " password
-	read -p "Berapa hari akun [$username] aktif: " AKTIF
+	#read -p "Isikan password akaun [$username]: " password
+	read -p "Berapa hari akaun [$username] aktif: " AKTIF
 	
 	expiredate=$(chage -l $username | grep "Account expires" | awk -F": " '{print $2}')
 	today=$(date -d "$expiredate" +"%Y-%m-%d")
 	expire=$(date -d "$today + $AKTIF days" +"%Y-%m-%d")
 	chage -E "$expire" $username
 	passwd -u $username
-	#useradd -M -N -s /bin/false -e $expire $username
+	#useradd -M -s /bin/false -e $expire $username
 
 	echo ""
 	echo "-----------------------------------"
@@ -61,7 +61,7 @@ if [ $? -eq 0 ]; then
 	echo "Squid Proxy: 8080, 3128"
 	echo "Username: $username"
 	#echo "Password: $password"
-	echo "Valid s/d: $(date -d "$today + $AKTIF days" +"%d-%m-%Y")"
+	echo "Expired: $(date -d "$today + $AKTIF days" +"%d-%m-%Y")"
 	echo "-----------------------------------"
 else
 	echo "Username [$username] belum terdaftar!"
