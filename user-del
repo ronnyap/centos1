@@ -8,7 +8,7 @@ read -p "Isikan username: " username
 read -p "Apakah Anda benar-benar ingin menghapus akaun [$username] [y/n]: " -e -i y REMOVE
 if [[ "$REMOVE" = 'y' ]]; then
                 passwd -l $username
-                userdel $username
+                userdel -r $username
                 echo ""
                 echo -e "\e[1;32mAkaun [$username] berjaya dihapuskan\e[0m"
                 exit 1
