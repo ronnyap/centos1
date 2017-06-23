@@ -1,14 +1,16 @@
 #!/bin/bash
 
-echo "-------------------------------- DELETE AKAUN SSH --------------------------------"
+echo "------------------HAPUS AKAUN SSH------------------"
 
-echo "                           ALL SUPPORTED BY GollumVPN                            "
-                           
-read -p "Enter username to be removed: " username
+echo "            ALL SUPPORTED BY GollumVPN             "
 
+read -p "Isikan username: " username
+read -p "Apakah Anda benar-benar ingin menghapus akaun [$username] [y/n]: " -e -i y REMOVE
+if [[ "$REMOVE" = 'y' ]]; then
+                passwd -l $username
                 userdel $username
                 echo ""
-                echo -e "\e[1;32mAkaun [$username] berjaya dihapuskan\e[0m"
+                echo -e "\e[1;32mAkaun [$username] berhasil dihapuskan\e[0m"
                 exit 1
 fi
 
