@@ -15,7 +15,7 @@ fi
 	echo "                   "
         echo ""
 
-        read -p "Enter username: " uname
+        read -p "Enter username: " username
         read -p "Enter password: " pass
         read -p "Enter expiry date (YYYY-MM-DD): " expdate
 	
