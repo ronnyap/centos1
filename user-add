@@ -5,8 +5,8 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 echo "------------------MEMBUAT AKAUN SSH & OVPN------------------"
 
 if [[ $vps = "soned" ]]; then
-	echo "                    Support GollumVPN                            "
-	echo "                    Script by SYAHZ86      "
+	echo "             Support GollumVPN                            "
+	echo "             Script by SYAHZ86      "
 else
 	echo "                                                 "
 	echo "                "
