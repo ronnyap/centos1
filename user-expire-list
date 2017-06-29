@@ -1,7 +1,7 @@
 #!/bin/bash
-echo "---------------"
-echo "   USERNAME    "
-echo "---------------"
+echo    "---------"
+echo -e "\e[91mUSERNAME\e[0m"
+echo    "---------"
 echo "" > /root/infouser.txt
 echo "" > /root/expireduser.txt
 echo "" > /root/alluser.txt
