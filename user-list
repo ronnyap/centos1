@@ -1,6 +1,6 @@
 #!/bin/bash
 echo    "---------"
-echo -e "\e[92mUSERNAME\e[0m"
+echo -e "\e[32mUSERNAME\e[0m"
 echo    "---------"
 cat /etc/shadow | cut -d: -f1,8 | sed /:$/d > /tmp/expirelist.txt
     totalaccounts=`cat /tmp/expirelist.txt | wc -l`
