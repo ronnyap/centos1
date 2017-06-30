@@ -1,6 +1,6 @@
 #!/bin/bash
 echo    "---------"
-echo -e "\e[91mUSERNAME\e[0m"
+echo -e "\e[31mUSERNAME\e[0m"
 echo    "---------"
 echo "" > /root/infouser.txt
 echo "" > /root/expireduser.txt
